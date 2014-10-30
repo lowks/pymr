@@ -1,11 +1,13 @@
 [![Build Status](https://travis-ci.org/kpurdon/pymr.svg?branch=master)](https://travis-ci.org/kpurdon/pymr)
 
-[Py]thon [M]ultiple-[R]epository Managment Tool
-======
+#[Py]thon [M]ultiple-[R]epository Managment Tool
 
-#Installation
 
-```pip install pymr```
+## Installation
+
+```
+pip install pymr
+```
 
 or
 
@@ -15,10 +17,11 @@ cd pymr
 python setup.py install
 ```
 
-#Running
+## Running PYMR
 
+After installation pymr can be executed as any other CLI tool
 
-## Available Commands
+### Available Commands
 
 To view help enter:
 
@@ -27,22 +30,32 @@ pymr-register --help
 pymr-run --help
 ```
 
-## Register Directories
+### Register Directories
 
-In any directory you want to run a command on enter the following command (pymr-register)
+In any directory you want to run a command on enter the following command:
 
-You can optionally add tags to the register command. This will allow you to run commands on only those directories with a set of tags (pymr-register -t foo)
+```
+pymr-register
+```
 
+You can optionally add tags to the register command. This will allow you to run commands on only those directories with a set of tags:
 
-## Run Commands
+```
+pymr-register -t foo
+```
+
+### Running Commands
 
 In any directory you can run the command:
-```pymr-run [cmd]```
+
+```
+pymr-run [cmd]
+```
 
 This command will recurse finding all .pymr files created by pymr-register.
 
 
-# Example
+## Example
 
 Given the following directory structure:
 
