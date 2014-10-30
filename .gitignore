@@ -1,0 +1,7 @@
+*.pyc
+/build/
+/pymr.egg-info/
+/dist/
+/wheel-0.24.0-py2.7.egg/
+/.python-version
+/.pymr/
