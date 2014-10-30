@@ -22,7 +22,8 @@ setuptools_kwargs = {
     ],
     'entry_points': {
         'console_scripts': [
-            'pymr-register = pymr.register:register'
+            'pymr-register = pymr.register:register',
+            'pymr-run = pymr.run:run'
         ]
     }
 }
