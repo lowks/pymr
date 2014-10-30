@@ -29,13 +29,10 @@ pymr-run --help
 
 ## Register Directories
 
-In any directory you want to run a command on enter the following command:
+In any directory you want to run a command on enter the following command (pymr-register)
 
-```pymr-register```
+You can optionally add tags to the register command. This will allow you to run commands on only those directories with a set of tags (pymr-register -t foo)
 
-You can optionally add tags to the register command. This will allow you to run commands on only those directories with a set of tags.
-
-```pymr-register -t foo```
 
 ## Run Commands
 
