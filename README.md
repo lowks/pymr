@@ -23,8 +23,10 @@ Running
 
 To view help enter:
 
-```pymr-register --help```
-```pymr-run --help```
+```
+pymr-register --help
+pymr-run --help
+```
 
 ## Register Directories
 
