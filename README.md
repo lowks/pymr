@@ -3,8 +3,7 @@
 [Py]thon [M]ultiple-[R]epository Managment Tool
 ======
 
-Installation
-------
+#Installation
 
 ```pip install pymr```
 
@@ -16,8 +15,8 @@ cd pymr
 python setup.py install
 ```
 
-Running
-------
+#Running
+
 
 ## Available Commands
 
@@ -40,10 +39,13 @@ You can optionally add tags to the register command. This will allow you to run 
 
 ## Run Commands
 
-In any directory you can run the command ```pymr-run [cmd]```. This command will recurse finding all .pymr files (created with ```pymr-register```).
+In any directory you can run the command:
+```pymr-run [cmd]```
 
-Example
-------
+This command will recurse finding all .pymr files created by pymr-register.
+
+
+# Example
 
 Given the following directory structure:
 
