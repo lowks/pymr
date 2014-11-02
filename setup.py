@@ -40,7 +40,7 @@ def get_readme():
 
 setup(
     name='pymr',
-    description='A python CLI tool for managing multiple vcs repositories.',
+    description='',
     long_description=get_readme(),
     author='Kyle W Purdon',
     author_email='kylepurdon@gmail.com',
