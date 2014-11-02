@@ -3,4 +3,5 @@
 #[Py]thon [M]ultiple-[R]epository
 
 [User Documentation](http://pymr.readthedocs.org/en/latest/)
-[Developer Documentation](Coming Soon!)
+
+[Developer Documentation](https://github.com/kpurdon/pymr/blob/master/DEVELOPMENT.md)
