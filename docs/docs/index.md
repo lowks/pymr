@@ -1,86 +1,33 @@
-[![Build Status](https://travis-ci.org/kpurdon/pymr.svg?branch=master)](https://travis-ci.org/kpurdon/pymr)
+[Py]thon [M]ultiple-[R]epository
+==========
 
-#[Py]thon [M]ultiple-[R]epository Managment Tool
+PyMR is a python command-line tool used to execute arbitrary commands on a set of tagged directories.
 
+## Features
 
-## Installation
+* Configuration is stored in the registered directory (allows for version-controlled configuration)
+* Any arbitrary command can be run, no ties to version-control specific commands.
+* Simple! PyMR is currently less than 150 lines of Python.
 
-```
-pip install pymr
-```
+## Where is PyMR
 
-or
+PyMR source is available on [Github](https://github.com/kpurdon/pymr) and is released to [PyPI](https://pypi.python.org/pypi/pymr).
 
-```
-git clone https://github.com/kpurdon/pymr.git
-cd pymr
-python setup.py install
-```
+I do plan on releasing PyMR as a [conda](http://www.continuum.io/blog/conda) package in the future.
 
-## Running PYMR
+Why I Created PyMR
+----------
 
-After installation pymr can be executed as any other CLI tool
+I created pymr because I was not satisfied with other tools:
 
-### Available Commands
+### MR (myrepos)
 
-To view help enter:
+http://myrepos.branchable.com/
 
-```
-pymr-register --help
-pymr-run --help
-```
+This tool was too focused on version-control repositories and stored a single config file in a home directory which did not allow for project level version controlled configuration.
 
-### Register Directories
+### GR (git-run)
 
-In any directory you want to run a command on enter the following command:
+https://www.npmjs.org/package/git-run
 
-```
-pymr-register
-```
-
-You can optionally add tags to the register command. This will allow you to run commands on only those directories with a set of tags:
-
-```
-pymr-register -t foo
-```
-
-### Running Commands
-
-In any directory you can run the command:
-
-```
-pymr-run [cmd]
-```
-
-This command will recurse finding all .pymr files created by pymr-register.
-
-
-## Example
-
-Given the following directory structure:
-
-```
-├── foo
-│   ├── bar
-│   ├── baz
-│   └── foo
-```
-
-Lets register the bar & baz directories with the tag "test":
-
-```
-cd foo/bar && pymr-register -t test
-cd foo/baz && pymr-register -t test
-```
-
-Lets register the foo directory with the tag "default":
-
-```
-cd foo/foo && pymr-register
-```
-
-Now, say we want to run "ls -la" for the bar/baz directories. From ANY directory above them run:
-
-```
-pymr-run -t test "ls -la"
-```
+This tool was too focused on git. While it did add the ability to tag projects a single config file in a home directory which did not allow for project level version controlled configuration.

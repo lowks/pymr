@@ -1,2 +1,7 @@
 site_name: pymr
+pages:
+  - [index.md, Home]
+  - [installation.md, Installation]
+  - [example.md, Getting Started]
+  - [commands.md, Commands]
 theme: readthedocs
