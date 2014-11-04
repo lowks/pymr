@@ -4,4 +4,5 @@ pages:
   - [installation.md, Installation]
   - [example.md, Getting Started]
   - [commands.md, Commands]
+  - [development.md, Development]
 theme: readthedocs
