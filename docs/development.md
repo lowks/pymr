@@ -3,6 +3,9 @@ Developer Setup
 
 Please fork the repository and submit pull requests. Any pull requests without passing tests will be rejected.
 
+[Forking](https://help.github.com/articles/fork-a-repo/)
+[Pull-Requests](https://help.github.com/articles/using-pull-requests/)
+
 Bootstrapping PyMR
 ---------
 
