@@ -1,4 +1,4 @@
-from pyfiglet import Figlet
+from __future__ import print_function
 
 import bootstrap
 import pypi
@@ -6,5 +6,12 @@ import test
 import version
 import mkdocs
 
-f = Figlet(font='slant')
-print f.renderText('PyMR')
+BANNER = """
+====================
+--------------------
+       PyMR
+--------------------
+====================
+"""
+
+print(BANNER)
