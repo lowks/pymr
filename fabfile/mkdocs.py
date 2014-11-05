@@ -6,7 +6,7 @@ def build():
     """
     create a new build of the docs
     """
-    cmd = '. ./.pymr/bin/activate && '
+    cmd = '. ./.pymrvenv/bin/activate && '
     cmd += 'mkdocs build'
     local(cmd)
 
@@ -16,6 +16,6 @@ def serve():
     """
     start the mkdocs development server
     """
-    cmd = '. ./.pymr/bin/activate && '
+    cmd = '. ./.pymrvenv/bin/activate && '
     cmd += 'mkdocs serve'
     local(cmd)

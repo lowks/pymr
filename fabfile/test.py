@@ -15,7 +15,7 @@ def flake8():
     """
     run flake8
     """
-    cmd = '. .pymr/bin/activate && '
+    cmd = '. .pymrvenv/bin/activate && '
     cmd += 'flake8 --config .flake8rc *.py **/*.py --verbose'
     local(cmd)
 
@@ -25,6 +25,6 @@ def unit_test():
     """
     run nosetests
     """
-    cmd = '. .pymr/bin/activate && '
+    cmd = '. .pymrvenv/bin/activate && '
     cmd += 'nosetests --verbose'
     local(cmd)

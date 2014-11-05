@@ -22,7 +22,7 @@ def create_venv():
     """
     creates a new virtualenv (.pymr) in the current directory
     """
-    cmd = 'virtualenv .pymr'
+    cmd = 'virtualenv .pymrvenv'
     local(cmd)
 
 
@@ -31,6 +31,6 @@ def install_requirements():
     """
     installs requirements.txt in the .pyrm virtualenv
     """
-    cmd = '. .pymr/bin/activate && '
+    cmd = '. .pymrvenv/bin/activate && '
     cmd += 'pip install -r requirements.txt'
     local(cmd)
