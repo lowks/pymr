@@ -11,23 +11,13 @@ PyMR is a python command-line tool used to execute arbitrary commands on a set o
 
 ## Where is PyMR
 
-PyMR source is available on [Github](https://github.com/kpurdon/pymr) and is released to [PyPI](https://pypi.python.org/pypi/pymr).
-
-I do plan on releasing PyMR as a [conda](http://www.continuum.io/blog/conda) package in the future.
+PyMR source is available on [Github](https://github.com/kpurdon/pymr) and is released to [PyPI](https://pypi.python.org/pypi/pymr). I do plan on releasing PyMR as a [conda](http://www.continuum.io/blog/conda) package in the future.
 
 Why I Created PyMR
 ----------
 
-I created pymr because I was not satisfied with other tools:
+I created PyMR because I was not satisfied with other tools:
 
-### MR (myrepos)
+### [MR (myrepos)](http://myrepos.branchable.com/)
 
-http://myrepos.branchable.com/
-
-This tool was too focused on version-control repositories and stored a single config file in a home directory which did not allow for project level version controlled configuration.
-
-### GR (git-run)
-
-https://www.npmjs.org/package/git-run
-
-This tool was too focused on git. While it did add the ability to tag projects a single config file in a home directory which did not allow for project level version controlled configuration.
+### [GR (git-run)](https://www.npmjs.org/package/git-run)

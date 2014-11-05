@@ -1,7 +1,7 @@
 Installation
 ----------
 
-pymr can be installed from pip, or from source.
+PyMR can be installed from pip, or from source.
 
 # PIP Installation
 ```
