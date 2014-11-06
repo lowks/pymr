@@ -4,19 +4,7 @@ import ConfigParser
 
 import click
 
-
-def set_default_tag(tag):
-    if not tag:
-        tag = 'default'
-
-    return tag
-
-
-def parse_tag(tag):
-    if hasattr(tag, '__iter__'):
-        tag = ','.join(tag)
-
-    return tag
+import tagutils
 
 
 def create_config(tag):
@@ -27,28 +15,18 @@ def create_config(tag):
     return config
 
 
-def unpack_tags(tags):
-    if ',' in tags:
-        tag_list = tags.split(',')
-    else:
-        tag_list = []
-        tag_list.append(tags)
-
-    return tag_list
-
-
 def append_tags(config, tag):
     if not config.has_section('tags'):
         config.add_section('tags')
 
     tags = config.get('tags', 'tags')
-    tag_list = unpack_tags(tags)
+    tag_list = tagutils.unpack(tags)
 
     for t in [tag]:
         if t not in tag_list:
             tag_list.append(t)
 
-    tag = parse_tag(tag_list)
+    tag = tagutils.parse(tag_list)
     config.set('tags', 'tags', tag)
 
     return config
@@ -89,8 +67,8 @@ def register(directory, tag, append):
     """
     print 'Creating file .pymr in {0}'.format(directory)
 
-    tag = set_default_tag(tag)
-    tag = parse_tag(tag)
+    tag = tagutils.set_default(tag)
+    tag = tagutils.parse(tag)
     config = get_config(directory, tag, append)
     fid = create_config_file(directory)
     write_config_to_file(fid, config)

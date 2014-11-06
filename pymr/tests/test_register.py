@@ -5,38 +5,7 @@ from click.testing import CliRunner
 
 from pymr import register
 
-
 class TestRegiser(unittest.TestCase):
-
-    def test_default_tag_is_set(self):
-        expected = 'default'
-        actual = register.set_default_tag('')
-
-        self.assertEqual(expected, actual)
-
-    def test_multiple_tags_are_parsed(self):
-        expected = 'foo,bar'
-        actual = register.parse_tag(('foo', 'bar'))
-
-        self.assertEqual(expected, actual)
-
-    def test_single_tag_is_parsed(self):
-        expected = 'foo'
-        actual = register.parse_tag('foo')
-
-        self.assertEqual(expected, actual)
-
-    def test_multiple_tags_are_unpacked(self):
-        expected = ['foo', 'bar']
-        actual = register.unpack_tags('foo,bar')
-
-        self.assertEqual(expected, actual)
-
-    def test_single_tag_is_unpacked(self):
-        expected = ['foo']
-        actual = register.unpack_tags('foo')
-
-        self.assertEqual(expected, actual)
 
     def test_register_command_creates_file(self):
         runner = CliRunner()

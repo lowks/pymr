@@ -5,19 +5,7 @@ from subprocess import call
 
 import click
 
-
-def set_default_tag(tag):
-    if not tag:
-        tag = 'default'
-
-    return tag
-
-
-def parse_tag(tag):
-    if not isinstance(tag, tuple):
-        tag = (tag,)
-
-    return tag
+import tagutils
 
 
 def find_registered_repos(directory):
@@ -30,23 +18,17 @@ def find_registered_repos(directory):
     return matches
 
 
-def unpack_tags(tags):
-    tag_list = tags.split(',')
-    return tag_list
-
-
 def find_tagged_files(files, tag):
 
     matches = []
     for fn in files:
         config = ConfigParser.ConfigParser()
         config.readfp(open(fn))
+
         tags = config.get('tags', 'tags')
-        if ',' in tags:
-            tag_list = unpack_tags(tags)
-        else:
-            tag_list = tags
-        for t in tag:
+        tag_list = tagutils.unpack(tags)
+
+        for t in [tag]:
             if t in tag_list:
                 matches.append(fn)
 
@@ -69,8 +51,8 @@ def run(command, tag, dryrun, basepath):
     """
     run a command on multiple registered repositories
     """
-    tag = set_default_tag(tag)
-    tag = parse_tag(tag)
+    tag = tagutils.set_default(tag)
+    tag = tagutils.parse(tag)
     files = find_registered_repos(basepath)
     match_files = find_tagged_files(files, tag)
 
