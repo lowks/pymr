@@ -3,6 +3,8 @@ from fabric.api import local, task, execute
 import bootstrap
 import test
 
+__all__ = ['all']
+
 
 @task(default=True)
 def all():
