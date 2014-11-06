@@ -40,7 +40,7 @@ def get_readme():
 
 setup(
     name='pymr',
-    description='',
+    description='A tool for executing ANY command in a set of tagged directories.',
     long_description=get_readme(),
     author='Kyle W Purdon',
     author_email='kylepurdon@gmail.com',
