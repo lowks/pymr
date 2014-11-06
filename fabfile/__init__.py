@@ -1,17 +1,20 @@
-from __future__ import print_function
-
 import bootstrap
 import pypi
 import test
 import version
 import mkdocs
+import develop
+import clean
+import clobber
 
 BANNER = """
-====================
---------------------
-       PyMR
---------------------
-====================
+========================================
+----------------------------------------
+    PyMR - Python Multi-Repository
+          Kyle W Purdon 2014
+               GPL v3+
+----------------------------------------
+========================================
 """
 
-print(BANNER)
+print BANNER

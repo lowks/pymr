@@ -3,6 +3,9 @@ from fabric.api import local, task, execute
 
 @task(default=True)
 def all():
+    """
+    install virtualenv, create a virtualenv, install requirements
+    """
     execute(install_venv)
     execute(create_venv)
     execute(install_requirements)
