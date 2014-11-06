@@ -6,7 +6,7 @@ def register():
     """
     register the project on pypi (original author only)
     """
-    cmd = 'python setup.py register'
+    cmd = '. .pymrvenv/bin/activate && python setup.py register'
     local(cmd)
 
 
@@ -15,5 +15,5 @@ def upload():
     """
     upload the project on pypi (original author only)
     """
-    cmd = 'python setup.py bdist_wheel upload'
+    cmd = '. .pymrvenv/bin/activate && python setup.py bdist_wheel upload'
     local(cmd)
